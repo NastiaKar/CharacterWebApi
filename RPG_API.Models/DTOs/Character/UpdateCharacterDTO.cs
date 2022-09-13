@@ -3,7 +3,6 @@
 public class UpdateCharacterDTO
 {
     public string Name { get; set; } = String.Empty;
-    public string RpgClass { get; set; } = String.Empty;
     public int? WeaponId { get; set; }
     public List<int> SkillIds { get; set; } = new();
 }

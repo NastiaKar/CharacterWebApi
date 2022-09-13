@@ -18,9 +18,7 @@ public class CharacterProfile : Profile
             .ForMember(dest => dest.RpgClass,
                 options => options.MapFrom(c => c.RpgClass.ConvertToRpgClass()));
 
-        CreateMap<UpdateCharacterDTO, Character>()
-            .ForMember(dest => dest.RpgClass,
-                options => options.MapFrom(c => c.RpgClass.ConvertToRpgClass()));
+        CreateMap<UpdateCharacterDTO, Character>();
         
         CreateMap<Character, DisplayCharacterDTO>()
             .ForMember(dest => dest.Weapon, 

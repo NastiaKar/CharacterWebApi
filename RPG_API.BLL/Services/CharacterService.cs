@@ -67,7 +67,9 @@ public class CharacterService : ICharacterService
         var weapon = await _context.Weapons.FirstOrDefaultAsync(w => request.WeaponId == w.Id);
         if (weapon == null)
             throw new Exception("Weapon not found");
+
         var skills = new List<Skill>();
+        
         foreach (int skillId in request.SkillIds)
         {
             var skill = await _context.Skills.FirstOrDefaultAsync(s => s.Id == skillId);

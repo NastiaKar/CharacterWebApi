@@ -15,10 +15,11 @@ builder.Services.AddDbContext<DataContext>(options =>
 });
 builder.Services.AddAutoMapper(config =>
 {
-    config.AddProfiles(new Profile[] { new SkillProfile(), new WeaponProfile()});
+    config.AddProfiles(new Profile[] { new SkillProfile(), new WeaponProfile(), new CharacterProfile()});
 });
 builder.Services.AddScoped<ISkillService, SkillService>();
 builder.Services.AddScoped<IWeaponService, WeaponService>();
+builder.Services.AddScoped<ICharacterService, CharacterService>();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

@@ -18,9 +18,6 @@ public class SkillService : ISkillService
         _mapper = mapper;
     }
 
-    internal SkillService(DbContextOptions<DataContext> options, IMapper mapper) 
-        : this(new DataContext(options), mapper) { }
-
     public async Task<IEnumerable<DisplaySkillDTO>> GetAll()
     {
         var skills = await _context.Skills.ToListAsync();

@@ -4,7 +4,6 @@ using RPG_API.BLL.Services.Interfaces;
 using RPG_API.DAL.Data;
 using RPG_API.DAL.Entities;
 using RPG_API.Models.DTOs.Weapon;
-
 namespace RPG_API.BLL.Services;
 
 public class WeaponService : IWeaponService
@@ -17,9 +16,6 @@ public class WeaponService : IWeaponService
         _context = context;
         _mapper = mapper;
     }
-    
-    internal WeaponService(DbContextOptions<DataContext> options, IMapper mapper) 
-        : this(new DataContext(options), mapper) { }
     
     public async Task<IEnumerable<DisplayWeaponDTO>> GetAll()
     {

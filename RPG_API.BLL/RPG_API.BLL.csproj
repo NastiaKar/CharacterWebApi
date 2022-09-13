@@ -21,4 +21,8 @@
       <ProjectReference Include="..\RPG_API.DAL\RPG_API.DAL.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Reference Include="Microsoft.AspNetCore.Mvc.Core" />
+    </ItemGroup>
+
 </Project>
